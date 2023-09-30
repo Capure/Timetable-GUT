@@ -6,13 +6,13 @@ import { Week } from "./types";
 import HourSlot from "./hourslot";
 
 const DAYS = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
+  "Poniedziałek",
+  "Wtorek",
+  "Środa",
+  "Czwartek",
+  "Piątek",
+  "Sobota",
+  "Niedziela",
 ];
 
 const convertToLocaleDay = (idx: number) => {
