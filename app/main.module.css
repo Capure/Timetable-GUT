@@ -1,0 +1,19 @@
+.classesViewContainer {
+  display: flex;
+  min-width: 100vw;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  margin-top: 120px;
+}
+
+.classesViewContainer section {
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  scroll-snap-align: start;
+  min-height: 100px;
+}
