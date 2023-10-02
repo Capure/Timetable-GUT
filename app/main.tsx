@@ -41,6 +41,11 @@ export default function Main({ data: dataRaw }: { data: Week }) {
       behavior: "smooth",
     });
   };
+  const offsetDay = (offset: number) => {
+    const contentRefCurrent = contentRef.current;
+    if (!contentRefCurrent) return;
+    scrollToIdx(contentRefCurrent, dayIdx + offset);
+  };
   const setToToday = () => {
     const newIdx = convertToLocaleDay(new Date().getDay());
     setDayIdx(newIdx);
@@ -65,7 +70,7 @@ export default function Main({ data: dataRaw }: { data: Week }) {
   }, []);
   return (
     <main>
-      <Header onClick={setToToday} day={DAYS[dayIdx]} />
+      <Header setToToday={setToToday} offsetDay={offsetDay} day={DAYS[dayIdx]} dayIdx={dayIdx} />
       <div ref={contentRef} className={styles.classesViewContainer}>
         {data.map((dayOfTheWeek, idx) => (
           <section key={idx}>
