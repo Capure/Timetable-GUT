@@ -9,9 +9,29 @@
   align-items: center;
   justify-content: space-evenly;
   background-color: var(--accent-color);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .header p {
   color: var(--text-color);
   cursor: pointer;
+}
+
+.controls {
+  width: 170px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
